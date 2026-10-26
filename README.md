@@ -2,6 +2,8 @@
 
 Migrate a Vue 3 app to React **one page at a time**, in production, without a feature freeze.
 
+**[▶ Live demo](https://maorbarel.github.io/vue-react-strangler/)**: click between the Vue and React pages, then use the browser back button across the boundary.
+
 A React shell owns the URL and renders every page that has been migrated. Everything else is
 rendered by the untouched legacy Vue app, loaded at runtime as a webpack Module Federation remote
 and driven through a three-method contract. Migrating a page is one line in a routes map; rolling
