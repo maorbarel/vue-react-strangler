@@ -1,0 +1,11 @@
+{
+  "name": "@strangler/contract",
+  "version": "0.0.0",
+  "private": true,
+  "description": "The mount contract between the React shell and the legacy Vue remote. Types only.",
+  "types": "./index.d.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit -p .",
+    "test": "echo \"types only\""
+  }
+}

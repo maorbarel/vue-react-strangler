@@ -1,0 +1,29 @@
+{
+  "name": "shell-react",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "The React shell: owns the URL, renders migrated pages, and hosts the legacy Vue app for everything else.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -b",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router": "^7.5.2"
+  },
+  "devDependencies": {
+    "@strangler/contract": "workspace:*",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^4.4.1",
+    "jsdom": "^26.1.0",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.3",
+    "vitest": "^3.1.2"
+  }
+}

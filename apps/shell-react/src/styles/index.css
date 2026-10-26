@@ -1,0 +1,102 @@
+/*
+ * Declare layer order before any legacy CSS can arrive. The legacy app injects its
+ * styles at runtime into `@layer legacy`; because that layer is declared first here,
+ * it is the weakest, and shell styles win regardless of <style> tag order.
+ */
+@layer legacy, shell;
+
+@layer shell {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: #1f2937;
+    background: #f8fafc;
+  }
+
+  a {
+    color: #2563eb;
+  }
+
+  .shell {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+  }
+
+  .shell-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem 2rem;
+    padding: 1rem 1.5rem;
+    background: #0f172a;
+    color: #f8fafc;
+  }
+
+  .shell-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .shell-nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #cbd5e1;
+    text-decoration: none;
+  }
+
+  .shell-nav a.active {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .shell-main {
+    min-width: 0;
+  }
+
+  .tag {
+    padding: 0.1rem 0.45rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .tag-react {
+    background: #0ea5e9;
+  }
+
+  .tag-vue {
+    background: #42b883;
+  }
+
+  .page {
+    display: grid;
+    gap: 1rem;
+    justify-items: start;
+    padding: 1.5rem;
+  }
+
+  .page h1 {
+    margin: 0;
+  }
+
+  .field {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .shell-status,
+  .shell-error {
+    padding: 1.5rem;
+  }
+}
